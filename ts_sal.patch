@@ -1,5 +1,5 @@
---- setup.env.orig	2017-12-08 11:29:59.000000000 -0600
-+++ setup.env	2017-12-08 11:52:30.000000000 -0600
+--- original/setup.env	2017-12-08 11:29:59.000000000 -0600
++++ new/setup.env	2017-12-08 11:52:30.000000000 -0600
 @@ -24,8 +24,8 @@
  export PATH=$JAVA_HOME/bin:${SAL_HOME}/bin:${PATH}
  export PYTHONPATH=$PYTHONPATH:${SAL_WORK_DIR}/lib
