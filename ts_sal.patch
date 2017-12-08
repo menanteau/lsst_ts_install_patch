@@ -1,5 +1,16 @@
---- SAL-orig/ts_sal/setup.env	2017-12-08 12:26:07.000000000 -0600
-+++ SAL-4b/ts_sal/setup.env	2017-12-08 12:27:43.000000000 -0600
+--- SAL-orig/ts_sal/setup.env	2017-12-08 12:55:31.000000000 -0600
++++ SAL-mod/ts_sal/setup.env	2017-12-08 13:28:05.000000000 -0600
+@@ -12,8 +12,8 @@
+ if [ -z "$OSPL_HOME" ]; then
+     echo "Please edit setup.env to set OSPL_HOME environment variable"
+ else
+-export SAL_HOME=$LSST_SDK_INSTALL/lsstsal
+-export SAL_WORK_DIR=$LSST_SDK_INSTALL/test
++export SAL_HOME=$LSST_SDK_INSTALL/ts_sal/lsstsal
++export SAL_WORK_DIR=$LSST_SDK_INSTALL/ts_sal/test
+ export SAL_CPPFLAGS=-m64
+ source $SAL_HOME/salenv.sh
+ export JAVA_HOME=/etc/alternatives/java_sdk_openjdk
 @@ -24,8 +24,8 @@
  export PATH=$JAVA_HOME/bin:${SAL_HOME}/bin:${PATH}
  export PYTHONPATH=$PYTHONPATH:${SAL_WORK_DIR}/lib
