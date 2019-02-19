@@ -64,7 +64,7 @@ cp -pv $LSST_SDK_INSTALL/ts_xml/sal_interfaces/*/*xml $SAL_WORK_DIR
 
 cd $SAL_WORK_DIR
 
-for device in EFD ATHeaderService ATCamera Scheduler
+for device in EFD ATHeaderService ATCamera Scheduler ATArchiver ATTCS
 do
     salgenerator $device validate
     salgenerator $device html
