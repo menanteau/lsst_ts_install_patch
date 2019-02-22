@@ -7,7 +7,7 @@ set -e
 
 interactive=0
 VERSION=v3.8.41
-SAL_PATH=/opt
+SAL_PATH=/opt/sal-home
 while [ "$1" != "" ]; do
     case $1 in
         -v | --version )        shift
@@ -107,5 +107,18 @@ echo "Making soft links for SALPY libraries"
 # This one get the SALPY files
 ln -s $SAL_WORK_DIR/*/*/*/*.so $SAL_WORK_DIR/lib
 
+# Make the tarball
+dname=`dirname $SAL_PATH`
+bname=`basename $SAL_PATH`
+echo "Making tarball:"
+echo "  cd $dname"
+echo "  tar cf $bname-$VERSION.tar $bname"
+cd $dname
+tar cf $bname-$VERSION.tar $bname
+echo "Tarball ready at: $PWD/$bname-$VERSION.tar"
+
+
 echo "To start: "
 echo "   source $SAL_PATH/setup_SAL.env"
+
+
