@@ -18,10 +18,10 @@ while [ "$1" != "" ]; do
                                 ;;
         -i | --interactive )    interactive=1
                                 ;;
-        -h | --help )           echo "sal_install.sh [-v version ] [-p path] [-i]] | [-h]]"
+        -h | --help )           echo "sal_install_fromSource.sh [-v version ] [-p path] [-i]] | [-h]]"
                                 exit
                                 ;;
-        * )                     echo "sal_install.sh [-v version ] [-p path] [-i]] | [-h]]"
+        * )                     echo "sal_install_fromSource.sh [-v version ] [-p path] [-i]] | [-h]]"
                                 exit 1
     esac
     shift
@@ -92,7 +92,8 @@ cp -pv $LSST_SDK_INSTALL/ts_xml/sal_interfaces/*/*xml $SAL_WORK_DIR
 
 cd $SAL_WORK_DIR
 
-for device in EFD ATHeaderService ATCamera Scheduler ATArchiver ATTCS
+# Edit CSC as required
+for device in EFD ATHeaderService ATCamera Scheduler ATArchiver ATPtg ATMCS ATSpectrograph ATTCS
 do
     salgenerator $device validate
     salgenerator $device html
