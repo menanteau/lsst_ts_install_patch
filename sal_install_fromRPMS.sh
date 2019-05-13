@@ -5,16 +5,16 @@ wget https://lsst-web.ncsa.illinois.edu/~felipe/packages/lsst-ts.repo
 mv -v lsst-ts.repo /etc/yum.repos.d
 
 # These are the ones we've needed for now
-yum -y install ATHeaderService
-yum -y install ATCamera
-yum -y install ATArchiver
-yum -y install EFD
-yum -y install Scheduler
-yum -y install ATPtg
-yum -y install ATMCS
-yum -y install ATSpectrograph
-yum -y install ATTCS
-
+yum -y install OpenSpliceDDS-6.9.0
+yum -y install ATHeaderService-3.9.0
+yum -y install ATCamera-3.9.0
+yum -y install ATArchiver-3.9.0
+yum -y install EFD-3.9.0
+yum -y install Scheduler-3.9.0
+yum -y install ATPtg-3.9.0
+yum -y install ATMCS-3.9.0
+yum -y install ATSpectrograph-3.9.0
+yum -y install ATTCS-3.9.0
 # Add more CSC if needed
 
 # Get the setup conf
