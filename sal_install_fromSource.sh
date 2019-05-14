@@ -141,10 +141,10 @@ dname=`dirname $SAL_PATH`
 bname=`basename $SAL_PATH`
 echo "Making tarball:"
 echo "  cd $dname"
-echo "  tar cf $bname-$VERSION.tar $bname"
+echo "  tar cf $bname-$SAL_VERSION.tar $bname"
 cd $dname
-tar cf $bname-$VERSION.tar $bname
-echo "Tarball ready at: $PWD/$bname-$VERSION.tar"
+tar cf $bname-$SAL_VERSION.tar $bname
+echo "Tarball ready at: $PWD/$bname-$SAL_VERSION.tar"
 
 
 echo "To start: "
