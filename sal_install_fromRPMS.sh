@@ -4,7 +4,7 @@ SAL_VERSION=3.10.0_001
 OPSL_VERSION=6.9.0
 
 # to remove
-# yum list installed | grep lsst-ts | awk '{printf "yum -y remove %s\n",$1}'
+# yum list installed | grep lsst-ts | awk '{printf "sudo yum -y remove %s\n",$1}'
 
 # Add the lsst-ts repo
 wget https://lsst-web.ncsa.illinois.edu/~felipe/packages/lsst-ts.repo
