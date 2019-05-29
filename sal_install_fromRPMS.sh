@@ -21,6 +21,10 @@ yum -y install ATPtg-$SAL_VERSION
 yum -y install ATMCS-$SAL_VERSION
 yum -y install ATSpectrograph-$SAL_VERSION
 yum -y install ATTCS-$SAL_VERSION
+# Needed by ATArchiver
+yum -y install CatchupArchiver-$SAL_VERSION
+yum -y install MTArchiver-$SAL_VERSION
+yum -y install PromptProcessing-$SAL_VERSION
 # Add more CSC if needed
 
 # Get the setup conf
