@@ -24,6 +24,7 @@ yum -y install ATTCS-$SAL_VERSION
 # Needed by ATArchiver
 yum -y install CatchupArchiver-$SAL_VERSION
 yum -y install MTArchiver-$SAL_VERSION
+yum -y install MTCamera-$SAL_VERSION
 yum -y install PromptProcessing-$SAL_VERSION
 # Add more CSC if needed
 
