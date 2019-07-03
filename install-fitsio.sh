@@ -7,10 +7,10 @@ wget $URL/archive/v$VERSION.tar.gz -O fitsio-$VERSION.tar.gz
 tar xvfz fitsio-$VERSION.tar.gz
 cd fitsio-$VERSION
 
-# HOME install option -- for testing
-#mkdir -p $HOME/Python3/lib64/python
-#export PYTHONPATH=$HOME/Python3/lib64/python:${PYTHONPATH}
-#python3 setup.py install --home=$HOME/Python3
+# HOME install option -- for testing salobj
+#mkdir -p $HOME/Python3/salobj/lib/python
+#export PYTHONPATH=$HOME/salobj-home/Python3/lib/python:${PYTHONPATH}
+#python setup.py install --home=$HOME/salobj-home/Python3
 
 # /usr install
 python3 setup.py install --prefix=/usr
