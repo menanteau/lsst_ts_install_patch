@@ -1,0 +1,560 @@
+module ATSpectrograph {
+struct command_abort_cacd5619 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_abort_cacd5619 
+struct command_changeDisperser_b04b04aa {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	disperser;
+	  string<256>	name;
+	};
+#pragma keylist command_changeDisperser_b04b04aa 
+struct command_changeFilter_e316cdec {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	filter;
+	  string<256>	name;
+	};
+#pragma keylist command_changeFilter_e316cdec 
+struct command_disable_d7152124 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_disable_d7152124 
+struct command_enable_8fe348e0 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_enable_8fe348e0 
+struct command_enterControl_1073afdd {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_enterControl_1073afdd 
+struct command_exitControl_2f432f71 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_exitControl_2f432f71 
+struct command_homeLinearStage_4bc07ca3 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_homeLinearStage_4bc07ca3 
+struct command_moveLinearStage_efdafec2 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  double	distanceFromHome;
+	};
+#pragma keylist command_moveLinearStage_efdafec2 
+struct command_setLogLevel_a6d79dc1 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	level;
+	};
+#pragma keylist command_setLogLevel_a6d79dc1 
+struct command_setSimulationMode_0379b61f {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	mode;
+	};
+#pragma keylist command_setSimulationMode_0379b61f 
+struct command_setValue_147c37e3 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	parametersAndValues;
+	};
+#pragma keylist command_setValue_147c37e3 
+struct command_standby_e3a4b188 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_standby_e3a4b188 
+struct command_start_187ec53f {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	settingsToApply;
+	};
+#pragma keylist command_start_187ec53f 
+struct command_stopAllAxes_e25fc977 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_stopAllAxes_e25fc977 
+struct logevent_appliedSettingsMatchStart_1d5f7370 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	appliedSettingsMatchStartIsTrue;
+	  long	priority;
+	};
+#pragma keylist logevent_appliedSettingsMatchStart_1d5f7370 
+struct logevent_detailedState_4cd58a1a {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	detailedState;
+	  long	priority;
+	};
+#pragma keylist logevent_detailedState_4cd58a1a 
+		const long ATSpectrograph_shared_FilterPosition_Filter0=1;
+		const long ATSpectrograph_shared_FilterPosition_Filter1=2;
+		const long ATSpectrograph_shared_FilterPosition_Filter2=3;
+		const long ATSpectrograph_shared_FilterPosition_Filter3=4;
+		const long ATSpectrograph_shared_FilterPosition_Inbetween=5;
+		const long ATSpectrograph_shared_DisperserPosition_Disperser0=1;
+		const long ATSpectrograph_shared_DisperserPosition_Disperser1=2;
+		const long ATSpectrograph_shared_DisperserPosition_Disperser2=3;
+		const long ATSpectrograph_shared_DisperserPosition_Disperser3=4;
+		const long ATSpectrograph_shared_DisperserPosition_Inbetween=5;
+		const long ATSpectrograph_shared_Status_Homing=1;
+		const long ATSpectrograph_shared_Status_Moving=2;
+		const long ATSpectrograph_shared_Status_Stationary=3;
+		const long ATSpectrograph_shared_Status_NotInPosition=4;
+		const long ATSpectrograph_shared_Error_None=1;
+		const long ATSpectrograph_shared_Error_Busy=2;
+		const long ATSpectrograph_shared_Error_NotInitialized=3;
+		const long ATSpectrograph_shared_Error_MoveTimeout=4;
+struct logevent_disperserInPosition_6d0db0f1 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	inPosition;
+	  long	priority;
+	};
+#pragma keylist logevent_disperserInPosition_6d0db0f1 
+struct logevent_errorCode_02c5e6ab {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	errorCode;
+	  string	errorReport;
+	  string	traceback;
+	  long	priority;
+	};
+#pragma keylist logevent_errorCode_02c5e6ab 
+struct logevent_filterInPosition_eca1f50c {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	inPosition;
+	  long	priority;
+	};
+#pragma keylist logevent_filterInPosition_eca1f50c 
+struct logevent_fwState_9d091114 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	state;
+	  long	priority;
+	};
+#pragma keylist logevent_fwState_9d091114 
+struct logevent_gwState_e568022e {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	state;
+	  long	priority;
+	};
+#pragma keylist logevent_gwState_e568022e 
+struct logevent_heartbeat_c3efdb5e {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	heartbeat;
+	  long	priority;
+	};
+#pragma keylist logevent_heartbeat_c3efdb5e 
+struct logevent_internalCommand_a8a248c7 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  octet	commandObject[950];
+	  long	priority;
+	};
+#pragma keylist logevent_internalCommand_a8a248c7 
+struct logevent_linearStageInPosition_982a5bb4 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	inPosition;
+	  long	priority;
+	};
+#pragma keylist logevent_linearStageInPosition_982a5bb4 
+struct logevent_logLevel_5467be66 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	level;
+	  long	priority;
+	};
+#pragma keylist logevent_logLevel_5467be66 
+struct logevent_logMessage_492da498 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	level;
+	  string	message;
+	  string	traceback;
+	  long	priority;
+	};
+#pragma keylist logevent_logMessage_492da498 
+struct logevent_loopTimeOutOfRange_097d8613 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	loopTimeOutOfRange;
+	  long	priority;
+	};
+#pragma keylist logevent_loopTimeOutOfRange_097d8613 
+struct logevent_lsState_a3ff61aa {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	state;
+	  long	priority;
+	};
+#pragma keylist logevent_lsState_a3ff61aa 
+struct logevent_rejectedCommand_cabde77f {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string	command;
+	  string	state;
+	  double	timestamp;
+	  long	priority;
+	};
+#pragma keylist logevent_rejectedCommand_cabde77f 
+struct logevent_reportedDisperserPosition_c01c9065 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	position;
+	  string<256>	name;
+	  long	priority;
+	};
+#pragma keylist logevent_reportedDisperserPosition_c01c9065 
+struct logevent_reportedFilterPosition_023d59cd {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	position;
+	  string<256>	name;
+	  long	priority;
+	};
+#pragma keylist logevent_reportedFilterPosition_023d59cd 
+struct logevent_reportedLinearStagePosition_6a4ca237 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  float	position;
+	  long	priority;
+	};
+#pragma keylist logevent_reportedLinearStagePosition_6a4ca237 
+struct logevent_settingVersions_b713bd6b {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string	recommendedSettingsVersion;
+	  string	recommendedSettingsLabels;
+	  string	settingsUrl;
+	  long	priority;
+	};
+#pragma keylist logevent_settingVersions_b713bd6b 
+struct logevent_settingsApplied_859f1465 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<16>	host;
+	  long	port;
+	  float	linearStageMinPos;
+	  float	linearStageMaxPos;
+	  float	linearStageSpeed;
+	  string<256>	filterNames;
+	  string<256>	gratingNames;
+	  long	priority;
+	};
+#pragma keylist logevent_settingsApplied_859f1465 
+struct logevent_simulationMode_fee2e2c4 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	mode;
+	  long	priority;
+	};
+#pragma keylist logevent_simulationMode_fee2e2c4 
+struct logevent_summaryState_2ff867db {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	summaryState;
+	  long	priority;
+	};
+#pragma keylist logevent_summaryState_2ff867db 
+struct logevent_timeout_aedc16a1 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	timeout;
+	  long	priority;
+	};
+#pragma keylist logevent_timeout_aedc16a1 
+struct loopTime_cba6a3d6 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  double	loopTime;
+	};
+#pragma keylist loopTime_cba6a3d6 
+struct timestamp_24a73fa3 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  double	timestamp;
+	};
+#pragma keylist timestamp_24a73fa3 
+	struct command
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      long		private_seqNum;
+      string<32>	device;
+      string<32>	property;
+      string<32>	action;
+      string<32>	itemValue;
+      string<128>	modifiers;
+	};
+	#pragma keylist command
+	struct ackcmd
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      long		private_seqNum;
+      long 		ack;
+      long 		error;
+      string<256>	result;
+	};
+	#pragma keylist ackcmd
+	struct logevent
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      string<128>	message;
+	};
+	#pragma keylist logevent
+};
+

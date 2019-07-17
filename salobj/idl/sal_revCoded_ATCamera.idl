@@ -1,0 +1,842 @@
+module ATCamera {
+struct bonnShutter_cc3d4d32 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  float	shutter5V;
+	  float	shutter36V;
+	};
+#pragma keylist bonnShutter_cc3d4d32 
+struct command_abort_3be98152 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_abort_3be98152 
+struct command_clear_7279ad52 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	nClears;
+	};
+#pragma keylist command_clear_7279ad52 
+struct command_disable_30b0689d {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_disable_30b0689d 
+struct command_disableCalibration_7bbb7fbd {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_disableCalibration_7bbb7fbd 
+struct command_discardRows_34a53a15 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	nRows;
+	};
+#pragma keylist command_discardRows_34a53a15 
+struct command_enable_325d6388 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_enable_325d6388 
+struct command_enableCalibration_84b7e499 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_enableCalibration_84b7e499 
+struct command_endImage_eac7cf81 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_endImage_eac7cf81 
+struct command_enterControl_0efb84c5 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_enterControl_0efb84c5 
+struct command_exitControl_ebe5940c {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_exitControl_ebe5940c 
+struct command_initGuiders_3962f921 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	roiSpec;
+	};
+#pragma keylist command_initGuiders_3962f921 
+struct command_initImage_cc77644f {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  double	deltaT;
+	};
+#pragma keylist command_initImage_cc77644f 
+struct command_setLogLevel_f729d421 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	level;
+	};
+#pragma keylist command_setLogLevel_f729d421 
+struct command_setSimulationMode_5368ab2a {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	mode;
+	};
+#pragma keylist command_setSimulationMode_5368ab2a 
+struct command_setValue_2c7597c0 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	parametersAndValues;
+	};
+#pragma keylist command_setValue_2c7597c0 
+struct command_standby_c11856b0 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  boolean	value;
+	};
+#pragma keylist command_standby_c11856b0 
+struct command_start_665cb608 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	settingsToApply;
+	};
+#pragma keylist command_start_665cb608 
+struct command_startImage_d3188aa1 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  string<256>	imageSequenceName;
+	  boolean	shutter;
+	  boolean	science;
+	  boolean	guide;
+	  boolean	wfs;
+	  double	timeout;
+	};
+#pragma keylist command_startImage_d3188aa1 
+struct command_takeImages_6bfee9aa {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<32>	device;
+	  string<32>	property;
+	  string<32>	action;
+	  string<32>	itemValue;
+	  long	numImages;
+	  double	expTime;
+	  boolean	shutter;
+	  boolean	science;
+	  boolean	guide;
+	  boolean	wfs;
+	  string<256>	imageSequenceName;
+	};
+#pragma keylist command_takeImages_6bfee9aa 
+struct heartbeat_80338df1 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	heartbeat;
+	  long	priority;
+	};
+#pragma keylist heartbeat_80338df1 
+struct logevent_appliedSettingsMatchStart_42e49875 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  boolean	appliedSettingsMatchStartIsTrue;
+	  long	priority;
+	};
+#pragma keylist logevent_appliedSettingsMatchStart_42e49875 
+struct logevent_bonnShutterSettingsApplied_7684d793 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	version;
+	  float	startA;
+	  float	startB;
+	  float	travelDistance;
+	  float	startVelocity;
+	  float	acceleration;
+	  float	maxVelocity;
+	  float	threshold;
+	  string<256>	shutterVersion;
+	  string<256>	firmwareVersion;
+	  long	priority;
+	};
+#pragma keylist logevent_bonnShutterSettingsApplied_7684d793 
+struct logevent_calibrationDetailedState_3c4c9265 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_calibrationDetailedState_3c4c9265 
+	 const long calibrationDetailedState_DISABLED=1;
+	 const long calibrationDetailedState_ENABLED=2;
+	 const long calibrationDetailedState_INTEGRATING=3;
+struct logevent_ccsCommandState_4c6c2ed6 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_ccsCommandState_4c6c2ed6 
+	 const long ccsCommandState_IDLE=1;
+	 const long ccsCommandState_BUSY=2;
+struct logevent_endOfImageTelemetry_52a338f0 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	imageSequenceName;
+	  long	imagesInSequence;
+	  string<256>	imageName;
+	  long	imageIndex;
+	  double	timeStamp;
+	  double	exposureTime;
+	  long	priority;
+	};
+#pragma keylist logevent_endOfImageTelemetry_52a338f0 
+struct logevent_endReadout_a2f5599a {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	imageSequenceName;
+	  long	imagesInSequence;
+	  string<256>	imageName;
+	  long	imageIndex;
+	  double	timeStamp;
+	  double	exposureTime;
+	  long	priority;
+	};
+#pragma keylist logevent_endReadout_a2f5599a 
+struct logevent_endShutterClose_40932e57 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_endShutterClose_40932e57 
+struct logevent_endShutterOpen_6f1d9b42 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_endShutterOpen_6f1d9b42 
+struct logevent_endTakeImage_9c349995 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_endTakeImage_9c349995 
+struct logevent_errorCode_400c7fe5 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	errorCode;
+	  string	errorReport;
+	  string	traceback;
+	  long	priority;
+	};
+#pragma keylist logevent_errorCode_400c7fe5 
+struct logevent_imageReadinessDetailedState_f8910cc9 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_imageReadinessDetailedState_f8910cc9 
+	 const long imageReadinessDetailedState_READY=1;
+	 const long imageReadinessDetailedState_NOT_READY=2;
+	 const long imageReadinessDetailedState_GETTING_READY=3;
+struct logevent_imageReadoutParameters_90c0ab37 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	imageName;
+	  string<256>	ccdNames;
+	  long	ccdType;
+	  long	overRows;
+	  long	overCols;
+	  long	readRows;
+	  long	readCols;
+	  long	readCols2;
+	  long	preCols;
+	  long	preRows;
+	  long	postCols;
+	  long	priority;
+	};
+#pragma keylist logevent_imageReadoutParameters_90c0ab37 
+	 const long imageReadoutParameters_E2V=1;
+	 const long imageReadoutParameters_ITL=2;
+struct logevent_logLevel_b767c823 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	level;
+	  long	priority;
+	};
+#pragma keylist logevent_logLevel_b767c823 
+struct logevent_logMessage_571eced8 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	level;
+	  string	message;
+	  string	traceback;
+	  long	priority;
+	};
+#pragma keylist logevent_logMessage_571eced8 
+struct logevent_notReadyToTakeImage_e6ab5224 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_notReadyToTakeImage_e6ab5224 
+struct logevent_offlineDetailedState_0448430b {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_offlineDetailedState_0448430b 
+	 const long offlineDetailedState_OFFLINE_AVAILABLE=1;
+	 const long offlineDetailedState_OFFLINE_PUBLISH_ONLY=2;
+struct logevent_prepareToTakeImage_51ed862e {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_prepareToTakeImage_51ed862e 
+struct logevent_raftsDetailedState_2695f2a0 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_raftsDetailedState_2695f2a0 
+	 const long raftsDetailedState_NEEDS_CLEAR=1;
+	 const long raftsDetailedState_CLEARING=2;
+	 const long raftsDetailedState_INTEGRATING=3;
+	 const long raftsDetailedState_READING_OUT=4;
+	 const long raftsDetailedState_QUIESCENT=5;
+struct logevent_readyToTakeImage_367f6e79 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_readyToTakeImage_367f6e79 
+struct logevent_settingVersions_d60e434a {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string	recommendedSettingsVersion;
+	  string	recommendedSettingsLabels;
+	  string	settingsUrl;
+	  long	priority;
+	};
+#pragma keylist logevent_settingVersions_d60e434a 
+struct logevent_settingsApplied_85e68a0a {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	settings;
+	  long	version;
+	  string<256>	wrebSettingsVersion;
+	  string<256>	bonnShutterSettingsVersion;
+	  long	priority;
+	};
+#pragma keylist logevent_settingsApplied_85e68a0a 
+struct logevent_shutterDetailedState_a5f9f008 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	substate;
+	  long	priority;
+	};
+#pragma keylist logevent_shutterDetailedState_a5f9f008 
+	 const long shutterDetailedState_CLOSED=1;
+	 const long shutterDetailedState_OPEN=2;
+	 const long shutterDetailedState_CLOSING=3;
+	 const long shutterDetailedState_OPENING=4;
+struct logevent_shutterMotionProfile_7beb3c38 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  double	measuredExposureTime;
+	  long	priority;
+	};
+#pragma keylist logevent_shutterMotionProfile_7beb3c38 
+struct logevent_simulationMode_827028cd {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	mode;
+	  long	priority;
+	};
+#pragma keylist logevent_simulationMode_827028cd 
+struct logevent_startIntegration_7d657a67 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	imageSequenceName;
+	  long	imagesInSequence;
+	  string<256>	imageName;
+	  long	imageIndex;
+	  double	timeStamp;
+	  double	exposureTime;
+	  long	priority;
+	};
+#pragma keylist logevent_startIntegration_7d657a67 
+struct logevent_startReadout_57ef807f {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  string<256>	imageSequenceName;
+	  long	imagesInSequence;
+	  string<256>	imageName;
+	  long	imageIndex;
+	  double	timeStamp;
+	  double	exposureTime;
+	  long	priority;
+	};
+#pragma keylist logevent_startReadout_57ef807f 
+struct logevent_startShutterClose_5086e2a8 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_startShutterClose_5086e2a8 
+struct logevent_startShutterOpen_50cbe03e {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	priority;
+	};
+#pragma keylist logevent_startShutterOpen_50cbe03e 
+struct logevent_summaryState_88201533 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	summaryState;
+	  long	priority;
+	};
+#pragma keylist logevent_summaryState_88201533 
+struct logevent_wrebSettingsApplied_e3589a00 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  long	version;
+	  string<256>	sequencerKey;
+	  long	daqVersion;
+	  long	firmwareVersion;
+	  long	aspic0_af1;
+	  long	aspic0_clamp;
+	  long	aspic0_gain;
+	  long	aspic0_rc;
+	  long	aspic0_tm;
+	  long	aspic1_af1;
+	  long	aspic1_clamp;
+	  long	aspic1_gain;
+	  long	aspic1_rc;
+	  long	aspic1_tm;
+	  long	bias0_csGate;
+	  long	bias0_csGateP;
+	  long	bias0_gd;
+	  long	bias0_gdP;
+	  long	bias0_od;
+	  long	bias0_odP;
+	  long	bias0_og;
+	  long	bias0_ogP;
+	  long	bias0_ogSh;
+	  long	bias0_rd;
+	  long	bias0_rdP;
+	  long	dac_csGate;
+	  long	dac_pclkHigh;
+	  long	dac_pclkHighP;
+	  long	dac_pclkHighSh;
+	  long	dac_pclkLow;
+	  long	dac_pclkLowP;
+	  long	dac_pclkLowSh;
+	  long	dac_rgHigh;
+	  long	dac_rgHighP;
+	  long	dac_rgHighSh;
+	  long	dac_rgLow;
+	  long	dac_rgLowP;
+	  long	dac_rgLowSh;
+	  long	dac_sclkHigh;
+	  long	dac_sclkHighP;
+	  long	dac_sclkHighSh;
+	  long	dac_sclkLow;
+	  long	dac_sclkLowP;
+	  long	dac_sclkLowSh;
+	  long	priority;
+	};
+#pragma keylist logevent_wrebSettingsApplied_e3589a00 
+struct wreb_4806d7e4 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  float	ckPSH_V;
+	  float	ckPOV;
+	  float	ogoV;
+	  float	temp1;
+	  float	temp2;
+	  float	temp3;
+	  float	temp4;
+	  float	temp5;
+	  float	temp6;
+	  float	atemp0U;
+	  float	atemp0L;
+	  float	ccdTemp0;
+	  float	rtdTemp;
+	  float	digPS_V;
+	  float	digPS_I;
+	  float	anaPS_V;
+	  float	anaPS_I;
+	  float	clkHPS_V;
+	  float	clkHPS_I;
+	  float	odPS_V;
+	  float	odPS_I;
+	  float	htrPS_V;
+	  float	htrPS_I;
+	  float	power;
+	  float	sckU_V;
+	  float	sckL_V;
+	  float	rgU_V;
+	  float	rgL_V;
+	  float	cks0V;
+	  float	rg0V;
+	  float	od0V;
+	  float	rd0V;
+	  float	gd0V;
+	  float	od0I;
+	};
+#pragma keylist wreb_4806d7e4 
+struct wrebPower_2e21c3a4 {
+	  string<8>	private_revCode; //private
+	  double	private_sndStamp; //private
+	  double	private_rcvStamp; //private
+	  long		private_seqNum; //private
+	  long		private_origin; //private
+	  long		private_host; //private
+	  float	digital_V;
+	  float	digital_I;
+	  float	analog_V;
+	  float	analog_I;
+	  float	clkHigh_V;
+	  float	clkHigh_I;
+	  float	clkLow_V;
+	  float	clkLow_I;
+	  float	od_V;
+	  float	od_I;
+	  float	dphi_V;
+	  float	dphi_I;
+	  float	heater_V;
+	  float	heater_I;
+	  float	hvbias_V;
+	  float	hvbias_I;
+	};
+#pragma keylist wrebPower_2e21c3a4 
+	struct command
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      long		private_seqNum;
+      string<32>	device;
+      string<32>	property;
+      string<32>	action;
+      string<32>	itemValue;
+      string<128>	modifiers;
+	};
+	#pragma keylist command
+	struct ackcmd
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      long		private_seqNum;
+      long 		ack;
+      long 		error;
+      string<256>	result;
+	};
+	#pragma keylist ackcmd
+	struct logevent
+	{
+      string<8>	private_revCode;
+      double		private_sndStamp;
+      double		private_rcvStamp;
+      long		private_origin;
+      long 		private_host;
+      string<128>	message;
+	};
+	#pragma keylist logevent
+};
+
