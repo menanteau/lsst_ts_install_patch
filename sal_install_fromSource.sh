@@ -7,9 +7,8 @@ set -e
 
 interactive=0
 # Define default version as of today
-SAL_VERSION_DEFAULT=V3.9.0-5
-XML_VERSION_DEFAULT=v3.9
-#OSPL_VERSION_DEFAULT=V6.9.0-2
+SAL_VERSION=v3.9.0-5
+XML_VERSION=v3.10.0
 SAL_PATH=/opt/sal-home
 while [ "$1" != "" ]; do
     case $1 in
@@ -19,9 +18,6 @@ while [ "$1" != "" ]; do
         -v_xml | --version )        shift
                                 XML_VERSION=$1
                                 ;;
-        #-v_opl | --version )        shift
-        #                        OSPL_VERSION=$1
-        #                                ;;
         -p | --path )           shift
                                 SAL_PATH=$1
                                 ;;
@@ -41,23 +37,19 @@ if [ $interactive == 1 ]; then
     echo "Hello, "$USER".  This script try to install the SAL/OCS software."
     echo "-----------------------------------------------------------------"
     # 1 - SAL_Version
-    read -p "Please enter the ts_sal version [$SAL_VERSION_DEFAULT]: " SAL_VERSION
+    read -p "Please enter the ts_sal version [$SAL_VERSION]: " SAL_VERSION
     SAL_VERSION="${SAL_VERSION:-$SAL_VERSION_DEFAULT}"
     # 2 - XML_Version
-    read -p "Please enter the ts_xml version [$XML_VERSION_DEFAULT]: " XML_VERSION
+    read -p "Please enter the ts_xml version [$XML_VERSION]: " XML_VERSION
     XML_VERSION="${XML_VERSION:-$XML_VERSION_DEFAULT}"
-    ## 3 - OSPL_Version
-    #read -p "Please enter the ts_xml version [$OSPL_VERSION_DEFAULT]: " OSPL_VERSION
-    #OSPL_VERSION="${OSPL_VERSION:-$OSPL_VERSION_DEFAULT}"
 
     # 3 -Install dir
     SAL_PATH_DEFAULT=$HOME/SAL-$SAL_VERSION
     read -p "Please enter the location where you will like to install it [$SAL_PATH_DEFAULT]: " SAL_PATH
     SAL_PATH="${SAL_PATH:-$SAL_PATH_DEFAULT}"
-else
-    SAL_VERSION=$SAL_VERSION_DEFAULT
-    XML_VERSION=$XML_VERSION_DEFAULT
-    #OSPL_VERSION=$OSPL_VERSION_DEFAULT
+#else
+#    SAL_VERSION=$SAL_VERSION_DEFAULT
+#    XML_VERSION=$XML_VERSION_DEFAULT
 fi
 
 # 1 - Set the git paths based on versions
@@ -76,8 +68,6 @@ git clone $GIT_URL/ts_sal.git -b $SAL_VERSION
 echo "Cloning ts_xml"
 echo "     git clone $GIT_URL/ts_xml.git -b $XML_VERSION"
 git clone $GIT_URL/ts_xml.git -b $XML_VERSION
-
-#git clone $GIT_URL/ts_opensplice.git -b $OSPL_VERSION
 
 # 3 - Make the soft links for ts_sal/lsstsal and ts_sal/test
 echo "Making soft links for  $SAL_PATH/lsstsal"
