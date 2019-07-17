@@ -7,7 +7,7 @@ set -e
 
 interactive=0
 # Define default version as of today
-SAL_VERSION=v3.9.0-5
+SAL_VERSION=v3.10.0
 XML_VERSION=v3.10.0
 SAL_PATH=/opt/sal-home
 while [ "$1" != "" ]; do
@@ -42,14 +42,10 @@ if [ $interactive == 1 ]; then
     # 2 - XML_Version
     read -p "Please enter the ts_xml version [$XML_VERSION]: " XML_VERSION
     XML_VERSION="${XML_VERSION:-$XML_VERSION_DEFAULT}"
-
     # 3 -Install dir
     SAL_PATH_DEFAULT=$HOME/SAL-$SAL_VERSION
     read -p "Please enter the location where you will like to install it [$SAL_PATH_DEFAULT]: " SAL_PATH
     SAL_PATH="${SAL_PATH:-$SAL_PATH_DEFAULT}"
-#else
-#    SAL_VERSION=$SAL_VERSION_DEFAULT
-#    XML_VERSION=$XML_VERSION_DEFAULT
 fi
 
 # 1 - Set the git paths based on versions
@@ -79,7 +75,6 @@ ln -s ts_sal/test .
 echo "Updating setup.env"
 cp -p $SAL_PATH/ts_sal/setup.env $SAL_PATH/ts_sal/setup.env.orig
 echo "export LSST_SDK_INSTALL=$SAL_PATH" >  $SAL_PATH/ts_sal/setup.env
-#echo "export OSPL_HOME=\$LSST_SDK_INSTALL/ts_opensplice/OpenSpliceDDS/V6.9.0/HDE/x86_64.linux" >> $SAL_PATH/ts_sal/setup.env
 # Use the rpm location for V6.9 and above
 echo "export OSPL_HOME=/opt/OpenSpliceDDS/V6.9.0/HDE/x86_64.linux" >> $SAL_PATH/ts_sal/setup.env
 echo "export PYTHON_BUILD_VERSION=3.6m" >> $SAL_PATH/ts_sal/setup.env
@@ -108,7 +103,7 @@ cp -pv $LSST_SDK_INSTALL/ts_xml/sal_interfaces/*/*xml $SAL_WORK_DIR
 cd $SAL_WORK_DIR
 
 # Edit CSC as required
-for device in EFD ATHeaderService ATCamera Scheduler ATArchiver ATPtg ATMCS ATSpectrograph ATTCS
+for device in EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpectrograph ATTCS
 do
     echo "----------------------------------------"
     echo "  Running salgenerator for $device      "
@@ -126,16 +121,15 @@ echo "Making soft links for SALPY libraries"
 # This one get the SALPY files
 ln -s $SAL_WORK_DIR/*/*/*/*.so $SAL_WORK_DIR/lib
 
-# Make the tarball -- optional
-dname=`dirname $SAL_PATH`
-bname=`basename $SAL_PATH`
-echo "Making tarball:"
-echo "  cd $dname"
-echo "  tar cf $bname-$SAL_VERSION.tar $bname"
-cd $dname
-tar cf $bname-$SAL_VERSION.tar $bname
-echo "Tarball ready at: $PWD/$bname-$SAL_VERSION.tar"
-
+# # Make the tarball -- optional
+# dname=`dirname $SAL_PATH`
+# bname=`basename $SAL_PATH`
+# echo "Making tarball:"
+# echo "  cd $dname"
+# echo "  tar cf $bname-$SAL_VERSION.tar $bname"
+# cd $dname
+# tar cf $bname-$SAL_VERSION.tar $bname
+# echo "Tarball ready at: $PWD/$bname-$SAL_VERSION.tar"
 
 echo "To start: "
 echo "   source $SAL_PATH/setup_SAL.env"
