@@ -103,7 +103,7 @@ cp -pv $LSST_SDK_INSTALL/ts_xml/sal_interfaces/*/*xml $SAL_WORK_DIR
 cd $SAL_WORK_DIR
 
 # Edit CSC as required
-for device in EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpectrograph ATTCS
+for device in EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpectrograph ATTCS ATHexapod
 do
     echo "----------------------------------------"
     echo "  Running salgenerator for $device      "
@@ -130,6 +130,13 @@ ln -s $SAL_WORK_DIR/*/*/*/*.so $SAL_WORK_DIR/lib
 # cd $dname
 # tar cf $bname-$SAL_VERSION.tar $bname
 # echo "Tarball ready at: $PWD/$bname-$SAL_VERSION.tar"
+
+# Need to clean up some files that are copied to /tmp by the installation
+cd /tmp
+rm -v salgenerics
+rm -v salhtml.log
+rm -v Makefile.sacpp*
+rm -v sreplace*
 
 echo "To start: "
 echo "   source $SAL_PATH/setup_SAL.env"
