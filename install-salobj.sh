@@ -49,8 +49,8 @@ cd $PRODUCT
 git checkout $VERSION
 
 # Add extra idl files from the build
-RUN cp -pv $INSTALL_PATH/sal-home/ts_sal/test/idl-templates/validated/sal/sal_revCoded_*.idl $PRODUCT_DIR/idl
+cp -pv $INSTALL_PATH/sal-home/ts_sal/test/idl-templates/validated/sal/sal_revCoded_*.idl $PRODUCT_DIR/idl
 
 # Setup for salobj (i.e. PYTHONPATH)
-RUN echo "source $INSTALL_PATH/setup_SAL.env" > $INSTALL_PATH/setup_salobj.env
-RUN echo "export PYTHONPATH=\${PYTHONPATH}:$INSTALL_PATH/ts_idl/python" >> $INSTALL_PATH/setup_salobj.env
+echo "source $INSTALL_PATH/setup_SAL.env" > $INSTALL_PATH/setup_salobj.env
+echo "export PYTHONPATH=\${PYTHONPATH}:$INSTALL_PATH/ts_idl/python" >> $INSTALL_PATH/setup_salobj.env
