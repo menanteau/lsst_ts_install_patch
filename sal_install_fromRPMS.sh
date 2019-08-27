@@ -21,6 +21,7 @@ yum -y install ATPtg-$SAL_VERSION
 yum -y install ATMCS-$SAL_VERSION
 yum -y install ATSpectrograph-$SAL_VERSION
 yum -y install ATTCS-$SAL_VERSION
+yum -y install ATHexapod-$SAL_VERSION
 # Needed by ATArchiver
 yum -y install CatchupArchiver-$SAL_VERSION
 yum -y install MTArchiver-$SAL_VERSION
