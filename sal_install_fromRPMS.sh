@@ -1,6 +1,6 @@
 # This is the recipe to install SAL/OpenSplice from rpms
 
-SAL_VERSION=3.10.0_001
+SAL_VERSION=3.10.0-4.1.1.el7
 OPSL_VERSION=6.9.0
 
 # to remove
