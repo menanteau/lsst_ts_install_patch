@@ -4,15 +4,16 @@ set -e
 
 TS_SAL_VERSION=v3.10.0
 TS_XML_VERSION=v4.1.1
+TS_IDL_VERSION=v0.2.0
+TS_SALOBJ_VERSION=v4.1.5
+
 INSTALL_PATH=/opt/lsst
 REPOS_TMP=/tmp/repos
+GIT_LSST_TS="https://github.com/lsst-ts"
 
 # Build from ts_sal/ts_xml from source using sal_install_fromSource.sh script
 ./sal_install_fromSource.sh  -v_sal $TS_SAL_VERSION -v_xml $TS_XML_VERSION -p $INSTALL_PATH/sal-home
 
-TS_SALOBJ_VERSION=v4.1.0
-TS_IDL_VERSION=v0.2.0
-GIT_LSST_TS="https://github.com/lsst-ts"
 
 # For salobj suport
 pip3 install setuptools==41.0.1 jsonschema==3.0.1 Cython==0.29.12
