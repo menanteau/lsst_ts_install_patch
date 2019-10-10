@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Simple script to install SAL/OCS from scrath on a centos7 machine
+# Script to install SAL/OCS from scrath on a centos7 machine
 # It asumes that the user has sudo power
 
 set -e
@@ -8,8 +8,9 @@ set -e
 interactive=0
 # Define default version as of today
 SAL_VERSION=v3.10.0
-XML_VERSION=v3.10.0
-SAL_PATH=/opt/sal-home
+XML_VERSION=v4.3.0
+SAL_PATH=/opt/lsst/sal-home
+: ${CCS_IDL_LIST:="EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpectrograph ATTCS ATHexapod"}
 while [ "$1" != "" ]; do
     case $1 in
         -v_sal | --version )        shift
@@ -54,6 +55,10 @@ GIT_URL=https://github.com/lsst-ts
 # 2 - Get the tarball and make the directory
 # And create the soft links for SAL_HOME and SAL_WORK_DIR
 # In this case SAL_PATH == LSST_SDK_INSTALL
+
+# Clean up before installing
+echo "Cleaning up $SAL_PATH"
+rm -rf $SAL_PATH
 mkdir -p $SAL_PATH
 cd $SAL_PATH
 
@@ -103,16 +108,19 @@ cp -pv $LSST_SDK_INSTALL/ts_xml/sal_interfaces/*/*xml $SAL_WORK_DIR
 cd $SAL_WORK_DIR
 
 # Edit CSC as required
-for device in EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpectrograph ATTCS ATHexapod
-do
+# for csc in `cd /tmp/build/ts_xml/sal_interfaces; ls | grep -v xml`; do \
+# Running salgenerator for all CSCs takes ~4hrs, so we'll only
+# build the ones we strickly need
+for csc in $CCS_IDL_LIST
+ do
     echo "----------------------------------------"
-    echo "  Running salgenerator for $device      "
+    echo "  Running salgenerator for $csc      "
     echo "----------------------------------------"
-    salgenerator $device validate
-    salgenerator $device html
-    salgenerator $device sal cpp
-    salgenerator $device sal python
-done
+    salgenerator $csc validate > /dev/null && echo $csc validate done || exit 1
+    salgenerator $csc html > /dev/null && echo $csc html done || exit 1
+    salgenerator $csc sal cpp > /dev/null && echo $csc sal cpp done || exit 1
+    salgenerator $csc sal python > /dev/null && echo $csc sal python done || exit 1
+ done
 
 # Copy the new libs
 # $SAL_WORK_DIR/lib should already be on the PYTHONPATH
@@ -140,5 +148,3 @@ rm -v sreplace*
 
 echo "To start: "
 echo "   source $SAL_PATH/setup_SAL.env"
-
-
