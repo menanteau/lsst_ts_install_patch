@@ -7,6 +7,6 @@ export CCS_IDL_LIST="EFD ATHeaderService ATCamera ATArchiver ATPtg ATMCS ATSpect
 
 ./install-salrpm.sh
 ./install-saldds.sh
-./install-salsrc.sh  -v_sal v$LSSTTS_SAL_VERSION -v_xml v$LSSTTS_XML_VERSION -p /opt/lsst/sal-home
+#./install-salsrc.sh  -v_sal v$LSSTTS_SAL_VERSION -v_xml v$LSSTTS_XML_VERSION -p /opt/lsst/sal-home
 ./install-salidl.sh
 ./install-salobj.sh

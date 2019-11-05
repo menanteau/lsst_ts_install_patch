@@ -19,8 +19,8 @@ git checkout v$LSSTTS_IDL_VERSION
 # Build and install the idl -- we'll do this outside
 # ./install_salsrc.sh  -v_sal v$LSSTTS_SAL_VERSION -v_xml v$LSSTTS_XML_VERSION -p $INSTALL_PATH/sal-home
 
-# Add extra idl files from the build
-cp -pv $INSTALL_PATH/sal-home/ts_sal/test/idl-templates/validated/sal/sal_revCoded_*.idl $PRODUCT_DIR/idl
+# Copy the idl files from the rpm installed location
+cp -pv /opt/lsst/ts_sal/idl/sal_revCoded_*.idl $PRODUCT_DIR/idl
 
 echo "source /opt/lsst/setup_SAL.env" > $INSTALL_PATH/setup_salidl.env
 echo "export TS_IDL_DIR=$INSTALL_PATH/ts_idl" >> $INSTALL_PATH/setup_salidl.env
