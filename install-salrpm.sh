@@ -14,6 +14,7 @@ cp -pv lsst-ts.repo /etc/yum.repos.d
 LSSTTS_RPM_VERSION=$LSSTTS_SAL_VERSION-$LSSTTS_XML_VERSION.el7
 for csc in $CCS_IDL_LIST
  do
+   echo $csc-$LSSTTS_RPM_VERSION
    yum install -y $csc-$LSSTTS_RPM_VERSION
  done
 
