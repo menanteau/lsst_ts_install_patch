@@ -9,7 +9,7 @@ echo "Removing: $rpmlist"
 yum -y remove $rpmlist
 
 # Add the lsst-ts repo
-cp -pv lsst-ts.repo /etc/yum.repos.d
+cp -pv lsst-ts-nexus.repo /etc/yum.repos.d
 
 LSSTTS_RPM_VERSION=$LSSTTS_SAL_VERSION-$LSSTTS_XML_VERSION.el7
 for csc in $CCS_IDL_LIST
