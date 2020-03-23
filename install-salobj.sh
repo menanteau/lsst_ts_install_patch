@@ -16,7 +16,7 @@ cd $INSTALL_DIR
 git clone https://github.com/lsst-ts/ts_salobj.git
 cd ts_salobj
 git checkout v$LSSTTS_SALOBJ_VERSION
-pip3 install -e .
+pip install -e .
 
 # Setup for salobj (i.e. PYTHONPATH)
 cat $INSTALL_PATH/setup_salidl.env > $INSTALL_PATH/setup_salobj.env
