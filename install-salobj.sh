@@ -3,20 +3,14 @@
 set -e
 
 # Install ts_salobj
-PRODUCT_DIR=$INSTALL_PATH/ts_salobj
-INSTALL_DIR=$INSTALL_PATH
-rm -rf $PRODUCT_DIR
-mkdir -p $PRODUCT_DIR
-cd $INSTALL_DIR
-git clone $GIT_LSST_TS/ts_salobj.git
-cd ts_salobj
-git checkout v$LSSTTS_SALOBJ_VERSION
-pip install -e .
+# This will install all of salobj
+source ${MINICONDA_PATH}/bin/activate
+conda install -c lsstts python=3.7 ts-salobj=${LSSTTS_SALOBJ_VERSION}
 
-# Setup for salobj (i.e. PYTHONPATH)
-cat $INSTALL_PATH/setup_salidl.env > $INSTALL_PATH/setup_salobj.env
-echo "export TS_SALOBJ_DIR=$INSTALL_PATH/ts_salobj" >> $INSTALL_PATH/setup_salobj.env
-echo "export PYTHONPATH=$INSTALL_PATH/ts_salobj/python:\${PYTHONPATH}" >> $INSTALL_PATH/setup_salobj.env
-echo "--------------------------------------------"
-echo "  Created: $INSTALL_PATH/setup_salobj.env"
-echo "--------------------------------------------"
+echo "# Load up HeaderService Environment" > /opt/lsst/setup_salobj.env
+echo "source /opt/lsst/setup_SAL.env" >> /opt/lsst/setup_salobj.env
+echo "source ${MINICONDA}/bin/activate" >> /opt/lsst/setup_salobj.env
+
+echo "-----------------------------------------------"
+echo "  Installed ts_salobj: ${LSSTTS_SALOBJ_VERSION}"
+echo "-----------------------------------------------"
