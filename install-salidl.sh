@@ -2,19 +2,10 @@
 
 set -e
 
-# Install via git clone ts_idl
-PRODUCT_DIR=$INSTALL_PATH/ts_idl
-INSTALL_DIR=$INSTALL_PATH
-rm -rf $PRODUCT_DIR
-mkdir -p $PRODUCT_DIR
-cd $INSTALL_DIR
-git clone $GIT_LSST_TS/ts_idl.git
-cd ts_idl
-git checkout v$LSSTTS_IDL_VERSION
-
-echo "source /opt/lsst/setup_SAL.env" > $INSTALL_PATH/setup_salidl.env
-echo "export TS_IDL_DIR=$INSTALL_PATH/ts_idl" >> $INSTALL_PATH/setup_salidl.env
-echo "export PYTHONPATH=$INSTALL_PATH/ts_idl/python:\${PYTHONPATH}" >> $INSTALL_PATH/setup_salidl.env
-echo "--------------------------------------------"
-echo "  Created: $INSTALL_PATH/setup_salidl.env"
-echo "--------------------------------------------"
+# This will install ts-idl and also it will
+# install all of the sal_revCoded_*.idl files in $MINICONDA_PATH/lib/python3.7/idl
+source ${MINICONDA_PATH}/bin/activate
+conda install -y -c lsstts python=3.7 ts-idl=${LSSTTS_IDL_VERSION}_${LSSTTS_XML_VERSION}
+echo "------------------------------------------"
+echo "  Installed ts_idl: ${LSSTTS_IDL_VERSION}_${LSSTTS_XML_VERSION}"
+echo "------------------------------------------"
