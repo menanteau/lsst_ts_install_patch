@@ -7,5 +7,5 @@ set -e
 source ${MINICONDA_PATH}/bin/activate
 conda install -y -c lsstts python=3.7 ts-idl=${LSSTTS_IDL_VERSION}_${LSSTTS_SAL_VERSION}_${LSSTTS_XML_VERSION}
 echo "------------------------------------------"
-echo "  Installed ts_idl: ${LSSTTS_IDL_VERSION}_${LSSTTS_XML_VERSION}"
+echo "  Installed ts_idl: ${LSSTTS_IDL_VERSION}_${LSSTTS_SAL_VERSION}_${LSSTTS_XML_VERSION}"
 echo "------------------------------------------"
