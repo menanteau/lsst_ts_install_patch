@@ -1,7 +1,8 @@
 #!/bin/env bash
 set -e
 
-export OSPL_VERSION=6.9.0
+export OSPL_VERSION=6.9.0-7
+export LSSTTS_DDS_VERSION=6.9.190925_7
 export LSSTTS_SAL_VERSION=4.1.1
 export LSSTTS_XML_VERSION=6.0.0
 export LSSTTS_SALOBJ_VERSION=5.15.0

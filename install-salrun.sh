@@ -27,4 +27,4 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 source $MINICONDA_PATH/bin/activate
 conda config --add channels conda-forge
 # Install python dds using conda
-conda install -y -c lsstts python=3.7 ts-dds==v$OSPL_VERSION
+conda install -y -c lsstts python=3.7 ts-dds==v$LSSTTS_DDS_VERSION
