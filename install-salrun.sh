@@ -8,8 +8,15 @@ yum -y install git gcc-c++ make patch wget
 
 # Add the lsst-ts repo to /etc and install the OSPL rpm
 cp -pv lsst-ts.repo /etc/yum.repos.d
-yum -y install OpenSpliceDDS-$OSPL_VERSION
+
+# Create the lsst-ts-nexus-private.repo using USER/PASS stored and environmental vars.
+envsubst < lsst-ts-nexus-private-template.repo > /etc/yum.repos.d/lsst-ts-nexus-private.repo
+
+yum -y install OpenSpliceDDS-$OSPL_RPM_VERSION
 export OSPL_HOME=/opt/OpenSpliceDDS/V${OSPL_VERSION}/HDE/x86_64.linux
+
+# Remove the private repo information
+rm /etc/yum.repos.d/lsst-ts-nexus-private.repo
 
 # Get the setup conf
 echo "export OSPL_HOME=/opt/OpenSpliceDDS/V${OSPL_VERSION}/HDE/x86_64.linux" > $INSTALL_PATH/setup_SAL.env
@@ -27,4 +34,6 @@ chmod +x Miniconda3-latest-Linux-x86_64.sh
 source $MINICONDA_PATH/bin/activate
 conda config --add channels conda-forge
 # Install python dds using conda
-conda install -y -c lsstts python=3.7 ts-dds==v$LSSTTS_DDS_VERSION
+# conda install -y -c lsstts python=3.7 ts-dds==v$LSSTTS_DDS_VERSION
+#conda install -y -c lsstts python=3.7 ts-dds==$LSSTTS_DDS_VERSION
+conda install -y -c lsstts/label/dev python=3.7 ts-dds==$LSSTTS_DDS_VERSION

@@ -1,0 +1,5 @@
+[lsst-ts-private]
+name=LSST Telescope and Site packages
+baseurl=https://${NEXUS_USER}:${NEXUS_PASS}@repo-nexus.lsst.org/nexus/repository/ts_yum_private
+enabled=True
+gpgcheck=False
