@@ -16,6 +16,7 @@ export INSTALL_PATH=/opt/lsst
 export TAG=v${HEADERSERVICE_VERSION}_salobj_v${LSSTTS_SALOBJ_VERSION}_xml_v${LSSTTS_XML_VERSION}
 
 ./install-salrun.sh
+./install-salddsconfig.sh
 ./install-salidl.sh
 ./install-salobj.sh
 ./install-headerservice.sh
