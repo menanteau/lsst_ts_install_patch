@@ -23,6 +23,11 @@ chmod +x minio
 # Move into the /usr/local/bin directory where Minio’s systemd startup script expects to find it:
 mv minio /usr/local/bin
 
+# Download mc
+echo "Downloading mc"
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+mv mc /usr/local/bin
 
 # Best to avoid running the Minio server as root, create minio-user
 echo "Adding user: minio-user"

@@ -7,6 +7,9 @@ systemctl disable minio
 echo "Removing minio from /usr/local/bin"
 rm -vf /usr/local/bin/minio
 
+echo "Removing mc from /usr/local/bin"
+rm -vf /usr/local/bin/mc
+
 echo "Removing user: minio"
 userdel -r minio-user
 
