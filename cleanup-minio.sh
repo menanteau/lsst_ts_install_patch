@@ -1,5 +1,5 @@
 echo "Stopping minio"
-systemctl start minio
+systemctl stop minio
 
 echo "Disabling minio"
 systemctl disable minio  

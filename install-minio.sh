@@ -10,7 +10,6 @@ fi
 echo "# Will use SECRET_KEY: $MYS3_SECRET_KEY"
 echo "# Will use:ACCESS_KEY: $MYS3_ACCESS_KEY"
 
-
 # How to setup minio as a server,
 # Largely based on:
 # https://www.digitalocean.com/community/tutorials/how-to-set-up-an-object-storage-server-using-minio-on-ubuntu-18-04
@@ -79,6 +78,28 @@ systemctl start minio
 
 # Verify Minio’s status, the IP address it’s bound to, its memory usage, and more by running this command:
 systemctl status minio -l
+
+# Sleep for a few secs
+echo "Waiting 5 secs...."
+sleep 5
+
+# Make the alias
+minio_alias=minio
+public_bucket=rubinobs-lfa-nts
+mc alias set $minio_alias http://$HOSTNAME:9000 ${MYS3_ACCESS_KEY} ${MYS3_SECRET_KEY}
+echo "Made alias as: $minio_alias"
+
+# Create the base public bucket
+mc mb $minio_alias/$public_bucket
+mc policy set public $minio_alias/$public_bucket
+echo "Made public bucket: $minio_alias/$public_bucket"
+
+# Copy file for testing curl via http
+mc cp hello.txt $minio_alias/$public_bucket
+echo "Copied hello.txt: $minio_alias/$public_bucket"
+echo "test curl/wget:"
+echo "   wget http://$HOSTNAME:9000/$public_bucket/hello.txt"
+echo ""
 
 #
 # Pole a hole on port 9000
