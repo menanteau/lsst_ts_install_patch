@@ -5,6 +5,7 @@ set -e
 
 # Install the OSPL configuration
 git clone https://github.com/lsst-ts/ts_ddsconfig --branch v${LSSTTS_DDSCONFIG_VERSION}
+rm -rf $INSTALL_PATH/ts_ddsconfig 
 mv -v ts_ddsconfig $INSTALL_PATH
 
 # Get the setup conf
