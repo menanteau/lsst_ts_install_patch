@@ -12,6 +12,12 @@ cp -pv lsst-ts.repo /etc/yum.repos.d
 # Create the lsst-ts-nexus-private.repo using USER/PASS stored and environmental vars.
 envsubst < lsst-ts-nexus-private-template.repo > /etc/yum.repos.d/lsst-ts-nexus-private.repo
 
+# Remove rpms first
+rpmlist=`yum list installed | grep @lsst-ts  | awk '{print $1}'`
+echo "Removing: $rpmlist"
+yum -y remove $rpmlist
+
+
 yum -y install OpenSpliceDDS-$OSPL_RPM_VERSION
 export OSPL_HOME=/opt/OpenSpliceDDS/V${OSPL_VERSION}/HDE/x86_64.linux
 
@@ -25,6 +31,8 @@ cat setup_SAL.env >> $INSTALL_PATH/setup_SAL.env
 
 # Install miniconda in /opt, for Py37 and beyond
 echo "Installing miniconda3 on: ${MINICONDA_PATH}"
+# Remove previous miniconda installation
+rm -rf $MINICONDA_PATH
 mkdir -p $MINICONDA_PATH
 cd $MINOCONDA_PATH
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
