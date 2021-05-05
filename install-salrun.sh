@@ -17,7 +17,8 @@ rpmlist=`yum list installed | grep @lsst-ts  | awk '{print $1}'`
 echo "Removing: $rpmlist"
 yum -y remove $rpmlist
 
-
+# Remove OpenSplice before installation
+yum -y remove OpenSpliceDDS
 yum -y install OpenSpliceDDS-$OSPL_RPM_VERSION
 export OSPL_HOME=/opt/OpenSpliceDDS/V${OSPL_VERSION}/HDE/x86_64.linux
 
