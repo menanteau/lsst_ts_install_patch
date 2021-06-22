@@ -10,12 +10,13 @@ export LSSTTS_SALOBJ_VERSION=6.4.1
 export LSSTTS_IDL_VERSION=3.1.3
 export LSSTTS_DDSCONFIG_VERSION=0.6.2
 export LSSTTS_IDL_CONDA_VERSION=${LSSTTS_IDL_VERSION}_${LSSTTS_XML_VERSION}_${LSSTTS_SAL_VERSION}
-export HEADERSERVICE_VERSION=2.9.0
+export HEADERSERVICE_VERSION=2.9.1
 export MINICONDA_PATH=/opt/miniconda3
 export INSTALL_PATH=/opt/lsst
 export TAG=v${HEADERSERVICE_VERSION}_salobj_v${LSSTTS_SALOBJ_VERSION}_xml_v${LSSTTS_XML_VERSION}
 
 ./install-salrun.sh
+./install-conda-base.sh
 ./install-salddsconfig.sh
 ./install-salidl.sh
 ./install-salobj.sh
